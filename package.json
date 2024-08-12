@@ -1,0 +1,11 @@
+{
+  "name": "f8_sass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass assets/scss:assets/css -w"
+  },
+  "author": "shinsouhitoshi1203",
+  "license": "ISC",
+  "description": ""
+}
