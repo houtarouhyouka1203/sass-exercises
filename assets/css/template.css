@@ -1,5 +1,23 @@
-body {
-  background: #fff100;
+:root {
+  --font: "DM Sans", sans-serif;
+  --bg-1: #5c3bee;
+  --bg-2: #FBFAFF;
+  --head: #080415;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  font-size: 1.8rem;
+  font-family: var(--font);
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=template.css.map */
