@@ -1,0 +1,43 @@
+$corner-base: 30px;
+@mixin card-size($w:100%){width: $w;height: 100%;}
+@mixin width-margin($w:100%,$m:$corner-base) {
+    width: calc($w - $m * 2);
+    margin-left: auto; margin-right: auto;
+}
+%flex-center{display: flex;align-items: center;justify-content: center;}
+%card-face{
+    @include card-size; @extend %flex-center; position: absolute; top: 0;left: 0; display: flex; align-items: center; justify-content: center;
+    backface-visibility: hidden;
+    border-radius: $corner-base;
+}
+
+
+.container {
+    @extend %flex-center;
+    @include width-margin(); height: 300px; border-radius: $corner-base; border: 1px dotted #000; margin-top: 40px;margin-bottom: 40px;padding: 30px 40px; max-width: 700px;
+}
+
+.card {
+    @include card-size(300px);
+    perspective: 400px;
+    &__inner{
+        @include card-size();
+        transform-style: preserve-3d;
+        position: relative;
+        transition: .3s;
+        > * {
+            @extend %card-face;
+        }
+        .card:hover & {
+            transform: rotateY(180deg);
+        }
+    }
+    &__front {
+        background: #fff100;
+    }
+    &__back {
+        background: #ff10ff;
+        transform: rotateY(180deg);
+    }
+    
+}

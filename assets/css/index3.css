@@ -1,0 +1,56 @@
+.container, .card__inner > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__inner > * {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  border-radius: 30px;
+}
+
+.container {
+  width: calc(100% - 60px);
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+  border-radius: 30px;
+  border: 1px dotted #000;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 30px 40px;
+  max-width: 700px;
+}
+
+.card {
+  width: 300px;
+  height: 100%;
+  perspective: 400px;
+}
+.card__inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  position: relative;
+  transition: 0.3s;
+}
+.card:hover .card__inner {
+  transform: rotateY(180deg);
+}
+.card__front {
+  background: #fff100;
+}
+.card__back {
+  background: #ff10ff;
+  transform: rotateY(180deg);
+}
+
+/*# sourceMappingURL=index3.css.map */
