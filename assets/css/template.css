@@ -18,6 +18,29 @@ html {
   font-size: 1.8rem;
   font-family: var(--font);
   font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 700;
+  line-height: 1.5;
+  padding-left: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(5rem, 2vw + 1rem, 4rem);
+  margin-top: 50px;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+code {
+  text-align: center;
 }
 
 /*# sourceMappingURL=template.css.map */
